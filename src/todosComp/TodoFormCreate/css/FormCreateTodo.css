@@ -1,0 +1,128 @@
+.form-create-todo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.label_title_form
+{
+    font-size: 22px;
+    font-weight: 500;
+    color: #656565;
+}
+.textarea-text-todo
+{
+    resize: none;
+    border: 1px solid #232323;
+    border-radius: 10px;
+    width: 85%;
+    padding: 5px;
+    height: 50px;
+}
+.div-conteinerbtn-class
+{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-around;
+}
+.div-conteinerButton
+{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-around;
+}
+/* .btn-class {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 6em;
+    border-radius: 1rem;
+    color: #3753ff;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+} */
+   
+.btn-class {
+    height: 35px;
+    width: 8em;
+    position: relative;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    border: 1px solid #909090;
+    overflow: hidden;
+    border-radius: 7px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    /* letter-spacing: 4px; */
+  }
+  
+  .btn-add::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(165, 149, 255);
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .btn-add:hover {
+    box-shadow: 1px 1px 13px 0px #c7b4ffaf;
+    color: rgb(205, 196, 255) !important;
+    border:1px solid #c7b4ffaf;
+    background: #5876ff;
+  }
+  .btn-add
+  {
+    background: #2e54fc;
+  }
+  .btn-add .btn-txt 
+    {
+        color:#fff;
+    }
+  .btn-add:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+
+  
+
+
+  .btn-cancel::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(255, 149, 149);
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .btn-cancel:hover {
+    box-shadow: 1px 1px 13px 0px #ffb4b482;
+    color: #fff;
+    border:1px solid #ffb4b4af;
+    background: #ff5858;
+  }
+
+  .btn-cancel:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }

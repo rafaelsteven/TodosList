@@ -1,0 +1,143 @@
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #000; /* Color de fondo */
+    opacity: 0.5;
+    height: 100vh;
+    justify-content: center;
+}
+
+.card_principal
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 24px;
+    border-radius: 0.8rem;
+
+    background: linear-gradient(
+        135deg,
+        rgba(163, 168, 240, 1) 0%,
+        rgb(74, 83, 248) 100%
+    );
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 1;
+      
+}
+.titulo_todos
+{
+    font-size: 30px;
+    padding: 20px;
+}
+
+.ul_todes
+{
+    min-width: 90%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.li_todos
+{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.15);
+}
+
+.input_search {
+    min-width: 80%;
+    background-color: #f5f5f5;
+    color: #000;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+    margin-bottom: 20px;
+
+  }
+  
+  .input_search:focus {
+    border-bottom: 2px solid #12e3ff;
+    border-radius: 4px 4px 2px 2px;
+  }
+  
+  .input_search:hover {
+    outline: 1px solid lightgrey;
+  }
+  .button_create
+  {
+    margin-top: 20px;
+    border-radius: 100%;
+    /* padding: 9px; */
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    border: rgb(0, 238, 255) 2px;
+    background-color:rgb(124, 239, 247) ;
+  }
+  .button_create:hover
+  {
+    transform: rotate(224deg);
+  }
+  .completd  p
+  {
+    text-decoration: line-through;
+  }
+  .completd .icon-check
+  {
+    border-color: #00ff37;
+    color:#00ff37;
+    stroke: #00ff37 !important; /* Aplica color a las líneas */
+    fill: #00ff37 !important;
+  }
+  .span_accion
+  {
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    border:#fff solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-check:hover
+  {
+    border-color: #00ff37;
+    color:#00ff37;
+  }
+  .icon-check:hover svg {
+    stroke: #00ff37;
+    fill: #00ff37;  
+}
+  .icon-delete:hover
+  {
+    border-color: #ff1b1b;
+    color:#ff1b1b;
+  }
+  .icon-delete:hover svg
+  {
+    stroke: #ff1b1b;
+    fill:#ff1b1b;
+  }
+  .style-icons
+  {
+    width: 18px;
+    height: 18px;
+  }
+

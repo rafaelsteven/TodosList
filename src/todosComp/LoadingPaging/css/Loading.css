@@ -1,0 +1,16 @@
+.LoadingPaging
+{
+    position: fixed; /* Fija el elemento en la ventana, sin importar el scroll */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centro exacto */
+    z-index: 9999; /* Coloca este div al frente de todo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
