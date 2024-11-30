@@ -3,7 +3,6 @@
 import '../css/styleGeneral.css';
 import React from 'react';
 import './App.css';
-import { useTodos } from './useTodos';
 import { TodoCount } from '../todosComp/TodoCount';
 import { CreateTodoButton } from '../todosComp/CreateTodosButton';
 import { TodoSearch } from '../todosComp/TodoSearch';
@@ -15,7 +14,8 @@ import { TodosError } from '../todosComp/TodosError';
 import { TodoHeader } from '../todosComp/TodoHeader';
 import { Modal } from '../todosComp/Modal';
 import { TodoFormCreate } from '../todosComp/TodoFormCreate';
-
+//use
+import { useTodos } from './useTodos';
 
 //solucion correcta
 function App() {
