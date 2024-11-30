@@ -1,10 +1,5 @@
-import { TodoContext } from "../TodoProvider";
-import React from "react";
-function CreateTodoButton (pro)
+function CreateTodoButton ({actionModal})
 {
-  const {
-    actionModal
-  } = React.useContext(TodoContext);
   return (
     <button 
     className="button_create"

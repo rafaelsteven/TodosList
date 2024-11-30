@@ -1,12 +1,5 @@
-import { TodoContext } from "../TodoProvider";
-import React from "react";
-
-function TodoSearch ()
+function TodoSearch ({searchValue,setSearchValue})
 {
-  const {
-    searchValue,
-    setSearchValue,
-  } = React.useContext(TodoContext);
   return (
     <input 
     className="input_search" 

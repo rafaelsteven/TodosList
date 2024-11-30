@@ -1,11 +1,7 @@
-import { TodoContext } from "../TodoProvider";
-import React from "react";
-function TodoCount ()
+
+function TodoCount ({todosCompleted,totalTodos})
 {
-  const {
-    todosCompleted,
-    totalTodos,
-  } = React.useContext(TodoContext);
+
   return (
     <h1 className="titulo_todos">Has completado 
     <span
