@@ -1,9 +1,9 @@
 
-function TodoCount ({todosCompleted,totalTodos})
+function TodoCount ({todosCompleted,totalTodos,loading})
 {
 
   return (
-    <h1 className="titulo_todos">Has completado 
+    <h1 className={`titulo_todos ${loading && 'titulo_todos--loading'}`}>Has completado 
     <span
     className="text-span-num"
     > {todosCompleted} </span> de 

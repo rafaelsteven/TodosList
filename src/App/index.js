@@ -14,6 +14,7 @@ import { TodosError } from '../todosComp/TodosError';
 import { TodoHeader } from '../todosComp/TodoHeader';
 import { Modal } from '../todosComp/Modal';
 import { TodoFormCreate } from '../todosComp/TodoFormCreate';
+import { EmptyTodos } from '../todosComp/EmptyTodos';   
 //use
 import { useTodos } from './useTodos';
 
@@ -36,18 +37,56 @@ function App() {
   //JSX
   return(
     <div className='card_principal'>
-        <TodoHeader>
+        <TodoHeader loading={loading}>
             <TodoCount 
             todosCompleted={todosCompleted}
             totalTodos={totalTodos}
+            // loading={loading}
             />
             <TodoSearch 
             searchValue={searchValue}
             setSearchValue={setSearchValue}
+            // loading={loading}
             />
         </TodoHeader>
-        <TodoList>
-            {loading && (<><LoadingSvg/><TodosLoading/><TodosLoading/><TodosLoading/></>) }
+        <TodoList 
+            error={error}
+            loading={loading}
+            searchTodos={searchTodos}
+            totalTodos={totalTodos}
+            searchValue={searchValue}
+            onError={() => <TodosError/>}
+            onLoading={() => <><LoadingSvg/><TodosLoading/></>}
+            onEmptyTodos={() => <EmptyTodos/>}
+            onEmptySearchResult={(searchText) => <p>No hay resultados para {searchText}</p>}
+            // render = {todo => (
+            //     <TodoItem 
+                    
+            //         key={todo.text}
+            //         text={todo.text}  
+            //         completed={todo.completed} 
+            //         onComplete={()=>completeTodos(todo.text)}
+            //         onDelete={()=>deleteTodo(todo.text)}
+            //         />
+            //     )}
+
+        >
+            {todo => (
+                <TodoItem 
+                    
+                    key={todo.text}
+                    text={todo.text}  
+                    completed={todo.completed} 
+                    onComplete={()=>completeTodos(todo.text)}
+                    onDelete={()=>deleteTodo(todo.text)}
+                    />
+                )}
+            
+        </TodoList>
+
+        {/* <TodoList>
+            
+            {loading && (<><LoadingSvg/><TodosLoading/></>) }
             {error && <TodosError/>}
             {(!loading && searchTodos.length === 0) && <p>Ingresa un todo</p>}
             {searchTodos.map(todo =>(
@@ -60,7 +99,7 @@ function App() {
                 onDelete={()=>deleteTodo(todo.text)}
                 />
             ))}
-        </TodoList>
+        </TodoList> */}
 
         <CreateTodoButton 
         actionModal={actionModal}

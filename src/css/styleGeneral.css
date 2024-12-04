@@ -33,7 +33,10 @@
     font-size: 30px;
     padding: 20px;
 }
-
+.titulo_todos--loading
+{
+    opacity: 0.5;
+}
 .ul_todes
 {
     min-width: 90%;
@@ -78,6 +81,11 @@
   .input_search:hover {
     outline: 1px solid lightgrey;
   }
+  .input_search:disabled
+  {
+    opacity: 0.5;
+  }
+
   .button_create
   {
     margin-top: 20px;
