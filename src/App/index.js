@@ -15,6 +15,7 @@ import { TodoHeader } from '../todosComp/TodoHeader';
 import { Modal } from '../todosComp/Modal';
 import { TodoFormCreate } from '../todosComp/TodoFormCreate';
 import { EmptyTodos } from '../todosComp/EmptyTodos';   
+import { ChangeAlertWithStorageListener } from '../todosComp/ChangeAlert';
 //use
 import { useTodos } from './useTodos';
 
@@ -32,7 +33,9 @@ function App() {
     searchValue,
     setSearchValue,
     addTodo,
-    actionModal,titleModal
+    actionModal,
+    titleModal,
+    sincronizeTodos
 } = useTodos();
   //JSX
   return(
@@ -59,17 +62,6 @@ function App() {
             onLoading={() => <><LoadingSvg/><TodosLoading/></>}
             onEmptyTodos={() => <EmptyTodos/>}
             onEmptySearchResult={(searchText) => <p>No hay resultados para {searchText}</p>}
-            // render = {todo => (
-            //     <TodoItem 
-                    
-            //         key={todo.text}
-            //         text={todo.text}  
-            //         completed={todo.completed} 
-            //         onComplete={()=>completeTodos(todo.text)}
-            //         onDelete={()=>deleteTodo(todo.text)}
-            //         />
-            //     )}
-
         >
             {todo => (
                 <TodoItem 
@@ -83,23 +75,6 @@ function App() {
                 )}
             
         </TodoList>
-
-        {/* <TodoList>
-            
-            {loading && (<><LoadingSvg/><TodosLoading/></>) }
-            {error && <TodosError/>}
-            {(!loading && searchTodos.length === 0) && <p>Ingresa un todo</p>}
-            {searchTodos.map(todo =>(
-            <TodoItem 
-                
-                key={todo.text}
-                text={todo.text}  
-                completed={todo.completed} 
-                onComplete={()=>completeTodos(todo.text)}
-                onDelete={()=>deleteTodo(todo.text)}
-                />
-            ))}
-        </TodoList> */}
 
         <CreateTodoButton 
         actionModal={actionModal}
@@ -116,6 +91,9 @@ function App() {
                 actionModal={actionModal}
                 />
             </Modal>)}
+            <ChangeAlertWithStorageListener
+            sincronizeTodos={sincronizeTodos}
+            />
     </div>
 );
 }
